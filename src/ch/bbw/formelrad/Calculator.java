@@ -1,4 +1,4 @@
-package application;
+package ch.bbw.formelrad;
 
 /**
  * Berechnet das Formelrad
@@ -49,7 +49,7 @@ public class Calculator {
 		 */
 	}
 	
-	/* Hier die Methoden mit den Formlen hinzufügen
+	/* Hier die Methoden mit den Formlen hinzufï¿½gen
 	 */
 	
 }
