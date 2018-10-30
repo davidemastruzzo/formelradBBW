@@ -57,8 +57,12 @@ public class Calculator {
             leistung = pFromUAndI(spannung, strom);
         }
 
-        if (spannung != 0 && widerstand != 0){
+        if (spannung != 0 && widerstand != 0) {
             leistung = pFromUAndR(spannung, widerstand);
+        }
+
+        if (widerstand != 0 && strom != 0) {
+            leistung = pFromRAndI(widerstand, strom);
         }
     }
 
