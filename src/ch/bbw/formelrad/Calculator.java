@@ -48,8 +48,16 @@ public class Calculator {
 		 * welche Methode unten aufgerufen werden muss.
 		 */
 	}
-	
-	/* Hier die Methoden mit den Formlen hinzuf�gen
-	 */
-	
+
+	public double pFromUAndI(double u, double i){
+		return u*i;
+	}
+
+	public double pFromUAndR(double u, double r){
+		return Math.pow(u,2)/r;
+	}
+
+	public double pFromRAndI(double r, double i){
+		return r*Math.pow(i,2);
+	}
 }
