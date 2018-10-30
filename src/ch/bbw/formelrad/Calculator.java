@@ -47,7 +47,6 @@ public class Calculator {
 		/* Hier auf Grund der vorhanden Werte entscheiden
 		 * welche Methode unten aufgerufen werden muss.
 		 */
-		System.out.println(pFromUAndR(2,2));
 	}
 
 	public double pFromUAndI(double u, double i){
@@ -57,5 +56,8 @@ public class Calculator {
 	public double pFromUAndR(double u, double r){
 		return Math.pow(u,2)/r;
 	}
-	
+
+	public double pFromRAndI(double r, double i){
+		return r*Math.pow(i,2);
+	}
 }
