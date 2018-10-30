@@ -48,8 +48,9 @@ public class Calculator {
 		 * welche Methode unten aufgerufen werden muss.
 		 */
 	}
-	
-	/* Hier die Methoden mit den Formlen hinzuf�gen
-	 */
+
+	public double pFromUAndI(double u, double i){
+		return u*i;
+	}
 	
 }
