@@ -60,4 +60,8 @@ public class Calculator {
 	public double pFromRAndI(double r, double i){
 		return r*Math.pow(i,2);
 	}
+
+	public double uFromRandI(double r, double i){
+		return r*i;
+	}
 }
