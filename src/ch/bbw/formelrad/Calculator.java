@@ -70,6 +70,7 @@ public class Calculator {
 
         if (leistung != 0 && strom != 0) {
             spannung = uFromPandI(leistung, strom);
+            widerstand = rFromPAndI(leistung, strom);
         }
 
         if (leistung != 0 && widerstand != 0) {
