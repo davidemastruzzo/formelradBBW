@@ -85,4 +85,8 @@ public class Calculator {
 	public double iFromUandR(double u, double r){
 		return u / r;
 	}
+		
+	public double rFromUandP(double u, double p){
+		return Math.pow(u,2) / p;
+	}
 }
