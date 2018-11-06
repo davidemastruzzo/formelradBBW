@@ -93,4 +93,8 @@ public class Calculator {
 	public double rFromPandi(double p, double i){
 		return p / Math.pow(i,2);
 	}
+		
+	public double rFromUandi(double u, double i){
+		return u / i;
+	}
 }
