@@ -44,10 +44,46 @@ public class Calculator {
                 ", widerstand=" + widerstand + "]";
     }
 
+    /*
+    Leistung = p
+    WidersStand = R
+    Stromstärke = I
+    Spannung = U
+     */
+
     public void calculate() {
-        /* Hier auf Grund der vorhanden Werte entscheiden
-         * welche Methode unten aufgerufen werden muss.
-         */
+
+        if (spannung != 0 && strom != 0) {
+            leistung = pFromUAndI(spannung, strom);
+            widerstand = rFromUAndI(spannung, strom);
+        }
+
+        if (spannung != 0 && widerstand != 0) {
+            leistung = pFromUAndR(spannung, widerstand);
+            strom = iFromUAndR(spannung, widerstand);
+        }
+
+        if (widerstand != 0 && strom != 0) {
+            leistung = pFromRAndI(widerstand, strom);
+            spannung = uFromRandI(widerstand, strom);
+        }
+
+        if (leistung != 0 && strom != 0) {
+            spannung = uFromPandI(leistung, strom);
+            widerstand = rFromPAndI(leistung, strom);
+        }
+
+        if (leistung != 0 && widerstand != 0) {
+            spannung = uFromPandR(leistung, widerstand);
+            strom = iFromPAndR(leistung, widerstand);
+        }
+
+        if (leistung != 0 && spannung != 0) {
+            strom = iFromPAndU(leistung, spannung);
+            widerstand = rFromUAndP(spannung, leistung);
+        }
+
+
     }
 
     public double pFromUAndI(double u, double i) {
