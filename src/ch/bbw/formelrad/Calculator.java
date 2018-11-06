@@ -77,4 +77,8 @@ public class Calculator {
 	public double iFromPandR(double p, double r){
 		return Math.sqrt(p / r);
 	}
+
+	public double iFromPandU(double p, double u){
+		return p / u;
+	}
 }
