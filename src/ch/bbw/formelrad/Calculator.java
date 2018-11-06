@@ -81,4 +81,8 @@ public class Calculator {
 	public double iFromPandU(double p, double u){
 		return p / u;
 	}
+
+	public double iFromUandR(double u, double r){
+		return u / r;
+	}
 }
