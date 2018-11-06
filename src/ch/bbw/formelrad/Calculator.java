@@ -80,6 +80,7 @@ public class Calculator {
 
         if (leistung != 0 && spannung != 0) {
             strom = iFromPAndU(leistung, spannung);
+            widerstand = rFromUAndP(spannung, leistung);
         }
 
 
