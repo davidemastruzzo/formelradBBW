@@ -75,6 +75,9 @@ public class Calculator {
             strom = iFromPAndR(leistung, widerstand);
         }
 
+        if (leistung != 0 && spannung != 0) {
+            strom = iFromPAndU(leistung, spannung);
+        }
     }
 
     public double pFromUAndI(double u, double i) {
