@@ -121,4 +121,16 @@ public class Calculator {
 	public double iFromUandR(double u, double r){
 		return u / r;
 	}
+		
+	public double rFromUandP(double u, double p){
+		return Math.pow(u,2) / p;
+	}
+		
+	public double rFromPandi(double p, double i){
+		return p / Math.pow(i,2);
+	}
+		
+	public double rFromUandi(double u, double i){
+		return u / i;
+	}
 }
