@@ -73,4 +73,16 @@ public class Calculator {
     public double uFromPandR(double p, double r) {
         return Math.sqrt(p * r);
     }
+
+	public double iFromPandR(double p, double r){
+		return Math.sqrt(p / r);
+	}
+
+	public double iFromPandU(double p, double u){
+		return p / u;
+	}
+
+	public double iFromUandR(double u, double r){
+		return u / r;
+	}
 }
