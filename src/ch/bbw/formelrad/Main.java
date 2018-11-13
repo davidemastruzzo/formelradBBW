@@ -83,25 +83,33 @@ public class Main extends Application {
 
             btnBerechnen.setOnAction(e -> {
                 double power = 0.0;
+                boolean powerGiven = false;
                 double tension = 0.0;
+                boolean tensionGiven = false;
                 double current = 0.0;
+                boolean currentGiven = false;
                 double resistence = 0.0;
+                boolean resistanceGiven = false;
                 int counter = 0;
 
                 if (txLeistung.getText().isEmpty() == false) {
                     power = Double.parseDouble(txLeistung.getText());
+                    powerGiven = true;
                     counter++;
                 }
                 if (txSpannung.getText().isEmpty() == false) {
                     tension = Double.parseDouble(txSpannung.getText());
+                    tensionGiven = true;
                     counter++;
                 }
                 if (txStrom.getText().isEmpty() == false) {
                     current = Double.parseDouble(txStrom.getText());
+                    currentGiven = true;
                     counter++;
                 }
                 if (txWiderstand.getText().isEmpty() == false) {
                     resistence = Double.parseDouble(txWiderstand.getText());
+                    resistanceGiven = true;
                     counter++;
                 }
 
