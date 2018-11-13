@@ -116,7 +116,7 @@ public class Calculator {
         return Math.sqrt(p * r);
     }
 	
-	// add rFromUAndP-method log
+	// add rFromPAndI-method log
 	public double iFromPAndR(double p, double r){
 		System.out.println("Aufruf der iFromPAndR Methode");
 		return Math.sqrt(p / r);
@@ -138,6 +138,7 @@ public class Calculator {
 	}
 		
 	public double rFromPAndI(double p, double i){
+		System.out.println("Aufruf der rFromPAndI Methode");
 		return p / Math.pow(i,2);
 	}
 		
