@@ -85,7 +85,7 @@ public class Calculator {
 
 
     }
-
+	// add pFromRAndI-method log
     public double pFromUAndI(double u, double i) {
 		System.out.println("Aufruf der pFromUAndI Methode");
         return u * i;
@@ -97,6 +97,7 @@ public class Calculator {
     }
 
     public double pFromRAndI(double r, double i) {
+		System.out.println("Aufruf der pFromRAndI Methode");
         return r * Math.pow(i, 2);
     }
 
