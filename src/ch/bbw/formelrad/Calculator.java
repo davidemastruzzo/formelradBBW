@@ -92,6 +92,7 @@ public class Calculator {
     }
 
     public double pFromUAndR(double u, double r) {
+		System.out.println("Aufruf der pFromUAndR Methode");
         return Math.pow(u, 2) / r;
     }
 
