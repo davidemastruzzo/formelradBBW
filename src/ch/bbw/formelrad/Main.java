@@ -3,6 +3,7 @@ package ch.bbw.formelrad;
 import java.io.FileInputStream;
 
 import javafx.application.Application;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -85,18 +86,35 @@ public class Main extends Application {
                 double tension = 0.0;
                 double current = 0.0;
                 double resistence = 0.0;
+                int counter = 0;
+
                 if (txLeistung.getText().isEmpty() == false) {
                     power = Double.parseDouble(txLeistung.getText());
+                    counter++;
                 }
                 if (txSpannung.getText().isEmpty() == false) {
                     tension = Double.parseDouble(txSpannung.getText());
+                    counter++;
                 }
                 if (txStrom.getText().isEmpty() == false) {
                     current = Double.parseDouble(txStrom.getText());
+                    counter++;
                 }
                 if (txWiderstand.getText().isEmpty() == false) {
                     resistence = Double.parseDouble(txWiderstand.getText());
+                    counter++;
                 }
+
+                if (counter > 2) {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Warnung");
+                    alert.setHeaderText("Mehr als zwei Eingaben");
+                    alert.setContentText("Bitte machen Sie GENAU zwei Angaben!");
+
+
+                    alert.showAndWait();
+                }
+
                 Calculator myCalculator = new Calculator(
                         power, tension, current, resistence);
                 System.out.print("Vorher:  ");
