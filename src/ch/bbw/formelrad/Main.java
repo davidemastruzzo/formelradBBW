@@ -83,25 +83,33 @@ public class Main extends Application {
 
             btnBerechnen.setOnAction(e -> {
                 double power = 0.0;
+                boolean powerGiven = false;
                 double tension = 0.0;
+                boolean tensionGiven = false;
                 double current = 0.0;
+                boolean currentGiven = false;
                 double resistence = 0.0;
+                boolean resistanceGiven = false;
                 int counter = 0;
 
                 if (txLeistung.getText().isEmpty() == false) {
                     power = Double.parseDouble(txLeistung.getText());
+                    powerGiven = true;
                     counter++;
                 }
                 if (txSpannung.getText().isEmpty() == false) {
                     tension = Double.parseDouble(txSpannung.getText());
+                    tensionGiven = true;
                     counter++;
                 }
                 if (txStrom.getText().isEmpty() == false) {
                     current = Double.parseDouble(txStrom.getText());
+                    currentGiven = true;
                     counter++;
                 }
                 if (txWiderstand.getText().isEmpty() == false) {
                     resistence = Double.parseDouble(txWiderstand.getText());
+                    resistanceGiven = true;
                     counter++;
                 }
 
@@ -110,8 +118,6 @@ public class Main extends Application {
                     alert.setTitle("Warnung");
                     alert.setHeaderText("Mehr als zwei Eingaben");
                     alert.setContentText("Bitte machen Sie GENAU zwei Angaben!");
-
-
                     alert.showAndWait();
                 }
 
@@ -124,9 +130,29 @@ public class Main extends Application {
                 System.out.println(myCalculator.toString());
 
                 txLeistung.setText(Double.toString(myCalculator.getLeistung()));
+                if (!powerGiven) {
+                    txLeistung.setStyle("-fx-text-inner-color: red;");
+                } else {
+                    txLeistung.setStyle("-fx-text-inner-color: black;");
+                }
                 txSpannung.setText(Double.toString(myCalculator.getSpannung()));
+                if (!tensionGiven) {
+                    txSpannung.setStyle("-fx-text-inner-color: red;");
+                } else {
+                    txSpannung.setStyle("-fx-text-inner-color: black;");
+                }
                 txStrom.setText(Double.toString(myCalculator.getStrom()));
+                if (!currentGiven) {
+                    txStrom.setStyle("-fx-text-inner-color: red;");
+                } else {
+                    txStrom.setStyle("-fx-text-inner-color: black;");
+                }
                 txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
+                if (!resistanceGiven) {
+                    txWiderstand.setStyle("-fx-text-inner-color: red;");
+                } else {
+                    txWiderstand.setStyle("-fx-text-inner-color: black;");
+                }
             });
 
             Scene scene = new Scene(root, 330, 490);
