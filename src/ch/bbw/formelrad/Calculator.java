@@ -87,50 +87,62 @@ public class Calculator {
     }
 
     public double pFromUAndI(double u, double i) {
+		System.out.println("Aufruf der pFromUAndI Methode");
         return u * i;
     }
 
     public double pFromUAndR(double u, double r) {
+		System.out.println("Aufruf der pFromUAndR Methode");
         return Math.pow(u, 2) / r;
     }
 
     public double pFromRAndI(double r, double i) {
+		System.out.println("Aufruf der pFromRAndI Methode");
         return r * Math.pow(i, 2);
     }
 
     public double uFromRAndI(double r, double i) {
+		System.out.println("Aufruf der uFromRAndI Methode");
         return r * i;
     }
 
     public double uFromPAndI(double p, double i) {
+		System.out.println("Aufruf der uFromPAndI Methode");
         return p / i;
     }
 
     public double uFromPAndR(double p, double r) {
+		System.out.println("Aufruf der uFromPAndR Methode");
         return Math.sqrt(p * r);
     }
-
+	
 	public double iFromPAndR(double p, double r){
+		System.out.println("Aufruf der iFromPAndR Methode");
 		return Math.sqrt(p / r);
 	}
 
 	public double iFromPAndU(double p, double u){
+		System.out.println("Aufruf der iFromPAndU Methode");
 		return p / u;
 	}
 
 	public double iFromUAndR(double u, double r){
+		System.out.println("Aufruf der iFromUAndR Methode");
 		return u / r;
 	}
 		
 	public double rFromUAndP(double u, double p){
+		System.out.println("Aufruf der rFromUAndP Methode");
 		return Math.pow(u,2) / p;
 	}
 		
 	public double rFromPAndI(double p, double i){
+		System.out.println("Aufruf der rFromPAndI Methode");
 		return p / Math.pow(i,2);
 	}
 		
 	public double rFromUAndI(double u, double i){
+		System.out.println("Aufruf der rFromUAndI Methode");
 		return u / i;
 	}
 }
