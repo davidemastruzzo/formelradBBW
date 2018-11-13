@@ -116,13 +116,14 @@ public class Calculator {
         return Math.sqrt(p * r);
     }
 	
-	// add iFromPAndR-method log
+	// add iFromPAndU-method log
 	public double iFromPAndR(double p, double r){
 		System.out.println("Aufruf der iFromPAndR Methode");
 		return Math.sqrt(p / r);
 	}
 
 	public double iFromPAndU(double p, double u){
+		System.out.println("Aufruf der iFromPAndU Methode");
 		return p / u;
 	}
 
