@@ -118,8 +118,6 @@ public class Main extends Application {
                     alert.setTitle("Warnung");
                     alert.setHeaderText("Mehr als zwei Eingaben");
                     alert.setContentText("Bitte machen Sie GENAU zwei Angaben!");
-
-
                     alert.showAndWait();
                 }
 
@@ -132,9 +130,29 @@ public class Main extends Application {
                 System.out.println(myCalculator.toString());
 
                 txLeistung.setText(Double.toString(myCalculator.getLeistung()));
+                if (!powerGiven) {
+                    txLeistung.setStyle("-fx-text-inner-color: red;");
+                } else {
+                    txLeistung.setStyle("-fx-text-inner-color: black;");
+                }
                 txSpannung.setText(Double.toString(myCalculator.getSpannung()));
+                if (!tensionGiven) {
+                    txSpannung.setStyle("-fx-text-inner-color: red;");
+                } else {
+                    txSpannung.setStyle("-fx-text-inner-color: black;");
+                }
                 txStrom.setText(Double.toString(myCalculator.getStrom()));
+                if (!currentGiven) {
+                    txStrom.setStyle("-fx-text-inner-color: red;");
+                } else {
+                    txStrom.setStyle("-fx-text-inner-color: black;");
+                }
                 txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
+                if (!resistanceGiven) {
+                    txWiderstand.setStyle("-fx-text-inner-color: red;");
+                } else {
+                    txWiderstand.setStyle("-fx-text-inner-color: black;");
+                }
             });
 
             Scene scene = new Scene(root, 330, 490);
