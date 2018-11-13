@@ -3,6 +3,7 @@ package ch.bbw.formelrad;
 import java.io.FileInputStream;
 
 import javafx.application.Application;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -102,6 +103,16 @@ public class Main extends Application {
                 if (txWiderstand.getText().isEmpty() == false) {
                     resistence = Double.parseDouble(txWiderstand.getText());
                     counter++;
+                }
+
+                if (counter > 2) {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Warnung");
+                    alert.setHeaderText("Mehr als zwei Eingaben");
+                    alert.setContentText("Bitte machen Sie GENAU zwei Angaben!");
+
+
+                    alert.showAndWait();
                 }
 
                 Calculator myCalculator = new Calculator(
