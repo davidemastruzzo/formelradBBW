@@ -87,6 +87,7 @@ public class Calculator {
     }
 
     public double pFromUAndI(double u, double i) {
+		System.out.println("Aufruf der pFromUAndI Methode");
         return u * i;
     }
 
