@@ -65,16 +65,16 @@ public class Calculator {
 
         if (widerstand != 0 && strom != 0) {
             leistung = pFromRAndI(widerstand, strom);
-            spannung = uFromRandI(widerstand, strom);
+            spannung = uFromRAndI(widerstand, strom);
         }
 
         if (leistung != 0 && strom != 0) {
-            spannung = uFromPandI(leistung, strom);
+            spannung = uFromPAndI(leistung, strom);
             widerstand = rFromPAndI(leistung, strom);
         }
 
         if (leistung != 0 && widerstand != 0) {
-            spannung = uFromPandR(leistung, widerstand);
+            spannung = uFromPAndR(leistung, widerstand);
             strom = iFromPAndR(leistung, widerstand);
         }
 
@@ -98,39 +98,39 @@ public class Calculator {
         return r * Math.pow(i, 2);
     }
 
-    public double uFromRandI(double r, double i) {
+    public double uFromRAndI(double r, double i) {
         return r * i;
     }
 
-    public double uFromPandI(double p, double i) {
+    public double uFromPAndI(double p, double i) {
         return p / i;
     }
 
-    public double uFromPandR(double p, double r) {
+    public double uFromPAndR(double p, double r) {
         return Math.sqrt(p * r);
     }
 
-	public double iFromPandR(double p, double r){
+	public double iFromPAndR(double p, double r){
 		return Math.sqrt(p / r);
 	}
 
-	public double iFromPandU(double p, double u){
+	public double iFromPAndU(double p, double u){
 		return p / u;
 	}
 
-	public double iFromUandR(double u, double r){
+	public double iFromUAndR(double u, double r){
 		return u / r;
 	}
 		
-	public double rFromUandP(double u, double p){
+	public double rFromUAndP(double u, double p){
 		return Math.pow(u,2) / p;
 	}
 		
-	public double rFromPandi(double p, double i){
+	public double rFromPAndI(double p, double i){
 		return p / Math.pow(i,2);
 	}
 		
-	public double rFromUandi(double u, double i){
+	public double rFromUAndI(double u, double i){
 		return u / i;
 	}
 }
